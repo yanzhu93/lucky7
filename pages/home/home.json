@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "singleTopic": "/components/singleTopic/singleTopic",
+    "nav-bar": "/components/navbar/navbar"
+  }
+}

@@ -1,0 +1,22 @@
+<!--pages/home/home.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<!-- <view class="header">
+  <image class="background" src="../../lib/imgs/home_background.png">
+  </image>
+  <image class="classify" src="../../lib/imgs/classify.png">
+  </image>
+  <view class="search" >
+    <icon type="search" size="12"></icon>
+    <input type="text" placeholder="大家都在搜什么呢？" adjust-position='true' name='search' bindinput='InputSearch' disabled="true"/>
+  </view>
+</view> -->
+<view class="singleTopic-box">
+  <view class="singleTopic"  wx:for ="{{[1,2,3,4]}}" wx:key="*this">
+    <singleTopic id='singleTopic' 
+      title='中兴芯片危机' 
+      time='1200'
+      data='{}'
+      follow='false'>
+    </singleTopic>
+  </view>
+</view>
