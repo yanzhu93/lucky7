@@ -1,22 +1,32 @@
 <!--pages/home/home.wxml-->
-<nav-bar navbar-data='{{navbarData}}'></nav-bar>
-<!-- <view class="header">
-  <image class="background" src="../../lib/imgs/home_background.png">
-  </image>
-  <image class="classify" src="../../lib/imgs/classify.png">
-  </image>
-  <view class="search" >
-    <icon type="search" size="12"></icon>
-    <input type="text" placeholder="大家都在搜什么呢？" adjust-position='true' name='search' bindinput='InputSearch' disabled="true"/>
-  </view>
-</view> -->
-<view class="singleTopic-box">
-  <view class="singleTopic"  wx:for ="{{[1,2,3,4]}}" wx:key="*this">
-    <singleTopic id='singleTopic' 
-      title='中兴芯片危机' 
-      time='1200'
-      data='{}'
-      follow='false'>
-    </singleTopic>
+<view class="home-content">
+  <view class="header">首页</view>
+  <view class="home-body">
+    <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" height="150"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="home-nav">
+      <text>动态</text>
+      <text>英科信息获得资本大鳄无名小千万投资</text>
+    </view>
+    <view class="home-item">
+      <view></view>
+      <view></view>
+    </view>
+    <view class="home-active">
+      <view class="home-ahead">最新活动</view>
+      <view class="home-aimg">
+        <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
+        <text>创业纪录片观影</text>
+      </view>
+      <view>
+      </view>
+    </view>
   </view>
 </view>
+
