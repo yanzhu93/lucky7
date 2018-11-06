@@ -13,7 +13,26 @@ Page({
     indicatorDots: true,
     autoplay: true,
     circular:true,
-    interval: 5000,
-    duration: 1000
+    interval: 2000,
+    duration: 500,
+    activeText: [
+      {label: '活动时间', msg: '2018-11-01'},
+      { label: '活动地点', msg: '越秀区流花路' },
+      { label: '主办单位', msg: '暂无' }
+    ],
+    listText: [
+      { 
+        src: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+        msg: '安卓开发者论坛'
+      },
+      {
+        src: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+        msg: '安卓开发者论坛'
+      },
+      {
+        src: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+        msg: '安卓开发者论坛'
+      }
+    ]
   }
 })

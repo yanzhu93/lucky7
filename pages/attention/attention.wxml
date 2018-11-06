@@ -1,19 +1,17 @@
 <!--pages/attention/attention.wxml-->
-<nav-bar navbar-data='{{navbarData}}'></nav-bar>
-<view class="myAttention">
-    <view class="singleTopic-box" wx:for="{{renderData}}" wx:key="{{index}}">
-        <view class="singleTopic" style="{{item.txtStyle}}"  bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE"  data-index="{{index}}">
-          <singleTopic 
-            title='{{item.title}}'
-            time='{{item.time}}'
-            data='{{item.data}}'
-            follow='{{item.follow}}'>
-          </singleTopic>
-        </view>
-        <!--这里是左滑按钮部分----start-->
-        <view bindtap="cancleAttention" class="posit" wx:if="{{item.follow}}">
-            <view class="cancle" data-id="{{item.id}}" data-index="{{index}}" catchtap="cancle">取消关注</view>
-        </view>
-        <!--这里是左滑按钮部分----end-->
-      </view>
+<view class="home-content">
+  <view class="header">活动</view>
+  <view class="home-body">
+    <swiper indicator-dots="{{indicatorDots}}" circular="{{circular}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" height="150"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="active-header">
+      <text>最热活动</text> 
+    </view>
+  </view>
 </view>

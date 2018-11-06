@@ -2,7 +2,7 @@
 <view class="home-content">
   <view class="header">首页</view>
   <view class="home-body">
-    <swiper indicator-dots="{{indicatorDots}}"
+    <swiper indicator-dots="{{indicatorDots}}" circular="{{circular}}"
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
       <block wx:for="{{imgUrls}}">
         <swiper-item>
@@ -24,7 +24,19 @@
         <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
         <text>创业纪录片观影</text>
       </view>
-      <view>
+      <view class="home-aText" wx:for="{{activeText}}" wx:for-index="idx" wx:for-item="itemName">
+        <text>{{itemName.label}}:</text>
+        <text>{{itemName.msg}}</text>
+      </view>
+      <view class="home-abutton">
+        <text>4小时</text>
+        <button>查看</button>
+      </view>
+    </view>
+    <view class="home-list">
+      <view class="home-lText" wx:for="{{listText}}" wx:for-index="idx" wx:for-item="itemName">
+        <image src="{{itemName.src}}"></image>
+        <text>{{itemName.msg}}</text>
       </view>
     </view>
   </view>

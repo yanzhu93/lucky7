@@ -1,6 +1,3 @@
 {
-  "usingComponents": {
-    "singleTopic": "/components/singleTopic/singleTopic",
-    "nav-bar": "/components/navbar/navbar"
-  }
+  "navigationBarTitleText": "首页"
 }
